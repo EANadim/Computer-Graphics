@@ -5,8 +5,6 @@
 void myDisplayChessboard(void)
 {
     glClear (GL_COLOR_BUFFER_BIT);
-    glColor3f (1.0, 0.0, 0.0);
-    glPointSize(5.0);
     int i=1;
     for(int x=0;x<400;x=x+50)
     {
