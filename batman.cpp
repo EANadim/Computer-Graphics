@@ -200,6 +200,34 @@ void myDisplay(void)
         yy1=yy1+10;
         yy2=yy2+10;
     }
+
+    glBegin(GL_POLYGON);
+    glVertex2i(90,210);
+    glVertex2i(120,210);
+    glVertex2i(120,220);
+    glVertex2i(90,220);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2i(290,210);
+    glVertex2i(260,210);
+    glVertex2i(260,220);
+    glVertex2i(290,220);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2i(100,210);
+    glVertex2i(110,210);
+    glVertex2i(110,20);
+    glVertex2i(100,20);
+    glEnd();
+
+    glBegin(GL_POLYGON);
+    glVertex2i(280,210);
+    glVertex2i(270,210);
+    glVertex2i(270,20);
+    glVertex2i(280,20);
+    glEnd();
     glFlush ();
 }
 void myInit (void)
@@ -209,7 +237,7 @@ void myInit (void)
     glLoadIdentity();
     gluOrtho2D(0.0, 380.0, 0.0, 250.0);
 }
-main(int argc, char** argv)
+int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
     glutInitDisplayMode (GLUT_SINGLE | GLUT_RGB);
@@ -219,4 +247,5 @@ main(int argc, char** argv)
     glutDisplayFunc(myDisplay);
     myInit ();
     glutMainLoop();
+    return 0;
 }
