@@ -7,6 +7,48 @@ void myDisplay(void)
     glColor3f (0.0, 0.0, 0.0);
     glPointSize(5.0);
 
+    glColor3f (1.0, 1.0, 0.0);
+    glPointSize(5.0);
+    glBegin(GL_POLYGON);//Yellow color
+    glVertex2i(70,10);
+    glVertex2i(310,10);
+    glVertex2i(370,70);
+    glVertex2i(370,180);
+    glVertex2i(310,240);
+    glVertex2i(70,240);
+    glVertex2i(10,180);
+    glVertex2i(10,70);
+    glEnd();
+
+    glColor3f (0.0, 0.0, 0.0);
+    glPointSize(5.0);
+    glBegin(GL_POLYGON);//left wing black color
+    glVertex2i(40,80);
+    glVertex2i(90,30);
+    glVertex2i(100,30);
+    glVertex2i(100,210);
+    glVertex2i(80,210);
+    glVertex2i(40,170);
+    glEnd();
+
+    glBegin(GL_POLYGON);//right wing black color
+    glVertex2i(280,30);
+    glVertex2i(290,30);
+    glVertex2i(340,80);
+    glVertex2i(340,170);
+    glVertex2i(300,210);
+    glVertex2i(280,210);
+    glEnd();
+
+    glBegin(GL_POLYGON);//neck to tail black color
+    glVertex2i(110,180);
+    glVertex2i(110,100);
+    glVertex2i(180,30);
+    glVertex2i(200,30);
+    glVertex2i(270,100);
+    glVertex2i(270,180);
+    glEnd();
+
     glBegin(GL_POLYGON);//bottom border
     glVertex2i(70,0);
     glVertex2i(310,0);
@@ -236,7 +278,7 @@ void myDisplay(void)
     yy2=30;
     while(xx1>=100)
     {
-        glBegin(GL_POLYGON);//bottom left angular wing
+        glBegin(GL_POLYGON);//bottom left angular tail
         glVertex2i(xx1,yy1);
         glVertex2i(xx2,yy1);
         glVertex2i(xx2,yy2);
@@ -255,7 +297,7 @@ void myDisplay(void)
     yy2=30;
     while(xx1<=270)
     {
-        glBegin(GL_POLYGON);//bottom left angular wing
+        glBegin(GL_POLYGON);//bottom right angular tail
         glVertex2i(xx1,yy1);
         glVertex2i(xx2,yy1);
         glVertex2i(xx2,yy2);
@@ -267,6 +309,34 @@ void myDisplay(void)
         yy1=yy1+10;
         yy2=yy2+10;
     }
+
+    glBegin(GL_POLYGON);//Straight line of the neck
+    glVertex2i(100,180);
+    glVertex2i(280,180);
+    glVertex2i(280,190);
+    glVertex2i(100,190);
+    glEnd();
+
+    glBegin(GL_POLYGON);//head
+    glVertex2i(170,180);
+    glVertex2i(210,180);
+    glVertex2i(210,220);
+    glVertex2i(170,220);
+    glEnd();
+
+    glBegin(GL_POLYGON);//left ear
+    glVertex2i(170,220);
+    glVertex2i(180,220);
+    glVertex2i(180,230);
+    glVertex2i(170,230);
+    glEnd();
+
+    glBegin(GL_POLYGON);//right ear
+    glVertex2i(200,220);
+    glVertex2i(210,220);
+    glVertex2i(210,230);
+    glVertex2i(200,230);
+    glEnd();
     glFlush ();
 }
 void myInit (void)
