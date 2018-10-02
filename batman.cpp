@@ -228,6 +228,45 @@ void myDisplay(void)
     glVertex2i(270,20);
     glVertex2i(280,20);
     glEnd();
+
+
+    xx1=180;
+    xx2=190;
+    yy1=20;
+    yy2=30;
+    while(xx1>=100)
+    {
+        glBegin(GL_POLYGON);//bottom left angular wing
+        glVertex2i(xx1,yy1);
+        glVertex2i(xx2,yy1);
+        glVertex2i(xx2,yy2);
+        glVertex2i(xx1,yy2);
+        glEnd();
+
+        xx1=xx1-10;
+        xx2=xx2-10;
+        yy1=yy1+10;
+        yy2=yy2+10;
+    }
+
+    xx1=190;
+    xx2=200;
+    yy1=20;
+    yy2=30;
+    while(xx1<=270)
+    {
+        glBegin(GL_POLYGON);//bottom left angular wing
+        glVertex2i(xx1,yy1);
+        glVertex2i(xx2,yy1);
+        glVertex2i(xx2,yy2);
+        glVertex2i(xx1,yy2);
+        glEnd();
+
+        xx1=xx1+10;
+        xx2=xx2+10;
+        yy1=yy1+10;
+        yy2=yy2+10;
+    }
     glFlush ();
 }
 void myInit (void)
